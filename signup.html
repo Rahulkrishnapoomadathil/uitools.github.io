@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sign Up</title>
+    
+    
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">UI Tools</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                   <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Signup</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+<!--signup form-->
+
+
+    <div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h2 style="text-align:center;">Sign up</h2>
+					<form class="" method="post" action="#" id="form-validation">
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Your Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                                    
+                                </div>
+                                <div class="errormessage" id="nameErr"></div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                                </div>
+                                <div class="errormessage" id="emailErr"></div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Username</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                                </div>
+                                    <div class="errormessage" id="usernameErr"></div>
+
+							</div>
+                        </div>
+                        	<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                                </div>
+                                <div class="errormessage" id="paswdErr"></div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                                </div>
+                                <div class="errormessage" id="confirmErr"></div>
+							</div>
+                        </div>
+                        <div class="form-group ">
+							<a href="#"  type="button" id="button"  class="btn btn-primary btn-lg btn-block login-button" onclick="validate()">Register</a>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+        <div class="text-success">">success</div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; UI Tools 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+    <script>
+function validate(){
+ $('#button').click(function(){
+var nameVal= $('#name').val();
+if(nameVal==""){
+    $('#nameErr').html('Name cannot be blank');
+}else if(nameVal.length<4){
+     $('#nameErr').html('Name cannot be less than 4 char');
+}
+    else if(nameVal){
+    $('#nameErr').html('');
+}
+});
+ $('#button').click(function(){
+var emailVal= $('#email').val();
+var emailPos=emailVal.indexOf("@");
+
+if(emailVal==""){
+    $('#emailErr').html('Email cannot be blank');
+}else if(emailPos==-1){
+  
+     $('#emailErr').html('It must be contain @ char');
+}
+     else if(emailVal){
+    $('#emailErr').html('');
+}
+});
+$('#button').click(function(){
+var userVal= $('#username').val();
+if(userVal==""){
+    $('#usernameErr').html('Username cannot be blank');
+}else if(userVal.length<4){
+     $('#usernameErr').html('Username cannot be less than 4 char');
+}
+        else if(userVal){
+    $('#usernameErr').html('');
+}
+});
+$('#button').click(function(){
+var paswdVal= $('#password').val(); 
+console.log(paswdVal)
+
+if(paswdVal==""){
+    $('#paswdErr').html('Password cannot be blank');
+}
+else if(paswdVal.length<7){
+    $('#paswdErr').html('Password cannot be less than 7 char');
+}
+else if(paswdVal){
+    $('#paswdErr').html('');
+}
+});
+$('#button').click(function(){
+var confirmVal= $('#confirm').val(); 
+var matchVal= $('#password').val();
+
+if(confirmVal==""){
+    $('#confirmErr').html('Confirm password cannot be blank');
+}
+if(confirmVal){
+    $('#confirmErr').html('');
+}
+if(matchVal != confirmVal)
+{
+    $('#confirmErr').html('Password cannot be matched');
+}
+if(matchVal == confirmVal && confirmVal!="")
+{
+      
+    $('#confirmErr').html('Password matched');
+    $('#confirmErr').removeClass("errormessage")
+    $('#confirmErr').addClass("text-success")
+}
+
+
+});
+
+}
+</script>
+</body>
+
+</html>
+
+<style>
+    /*
+/* Created by Filipe Pina
+ * Specific styles of signin, register, component
+ */
+/*
+ * General styles
+ */
+#playground-container {
+    height: 500px;
+    overflow: hidden !important;
+    -webkit-overflow-scrolling: touch;
+}
+body, html{
+     height: 100%;
+ 	background-repeat: no-repeat;
+ 	background:url(img/header.jpg);
+    font-family: 'Lora', 'Times New Roman', serif;
+  color: #333333;
+	    background-size: cover;
+}
+
+.main{
+ 	margin:50px 15px;
+}
+
+h1.title { 
+	font-size: 50px;
+	font-family: 'Passion One', cursive; 
+	font-weight: 400; 
+}
+
+hr{
+	width: 10%;
+	color: #fff;
+}
+
+.form-group{
+	margin-bottom: 15px;
+}
+
+label{
+	margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.main-login{
+ 	background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+.form-control {
+    height: auto!important;
+padding: 8px 12px !important;
+}
+.input-group {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+}
+#button {
+    border: 1px solid #ccc;
+    margin-top: 28px;
+    padding: 6px 12px;
+    color: #666;
+    text-shadow: 0 1px #fff;
+    cursor: pointer;
+    -moz-border-radius: 3px 3px;
+    -webkit-border-radius: 3px 3px;
+    border-radius: 3px 3px;
+    -moz-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+    -webkit-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+    box-shadow: 0 1px #fff inset, 0 1px #ddd;
+    background: #f5f5f5;
+    background: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #eeeeee));
+    background: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    background: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    background: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    background: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+}
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 400px;
+    padding: 10px 40px;
+	background:darkgray;
+	    color: #FFF;
+    text-shadow: none;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+
+}
+span.input-group-addon i {
+    color: #009edf;
+    font-size: 17px;
+}
+
+.login-button{
+	margin-top: 5px;
+}
+
+.login-register{
+	font-size: 11px;
+	text-align: center;
+}
+.main
+{
+    margin: 127px 15px;
+}
+    footer .list-inline
+    {
+            margin-top: -13%;
+    }
+    .errormessage
+    {
+        color: red;
+        font-size: 15px;
+    }
+    .text-success
+    {
+         font-size: 15px;
+    }
+  
+</style>
